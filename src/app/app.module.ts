@@ -9,6 +9,7 @@ import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 
 import { IconModule, IconSetModule, IconSetService } from '@coreui/icons-angular';
 
+import {MatTableModule} from '@angular/material/table';
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
 };
@@ -22,6 +23,7 @@ import { P404Component } from './views/error/404.component';
 import { P500Component } from './views/error/500.component';
 import { LoginComponent } from './views/login/login.component';
 import { RegisterComponent } from './views/register/register.component';
+import { ProfileComponent } from './team1/profile/profile.component';
 
 const APP_CONTAINERS = [
   DefaultLayoutComponent
@@ -43,8 +45,23 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { ChartsModule } from 'ng2-charts';
 
+
+
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+
+
+
+
 @NgModule({
   imports: [
+    MatTableModule,
+    MatDialogModule,
+    MatInputModule,
+    MatButtonModule,
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
@@ -66,7 +83,9 @@ import { ChartsModule } from 'ng2-charts';
     P404Component,
     P500Component,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    ProfileComponent
+
   ],
   providers: [
     {
@@ -75,6 +94,9 @@ import { ChartsModule } from 'ng2-charts';
     },
     IconSetService,
   ],
-  bootstrap: [ AppComponent ]
+  bootstrap: [ AppComponent ],
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA
+  ]
 })
 export class AppModule { }

@@ -8,6 +8,8 @@ import {LoginComponent} from './login/login.component';
 import {ProjectComponent} from './project/project.component';
 import {RegisterComponent} from './register/register.component';
 import {RequestComponent} from './request/request.component';
+import {ProfileComponent} from './profile/profile.component';
+
 
 const routes: Routes = [
   {
@@ -60,6 +62,13 @@ const routes: Routes = [
         component: RegisterComponent,
         data: {
           title: 'Register'
+        }
+      },
+      {
+        path: 'profile',
+        component: ProfileComponent,
+        data: {
+          title: 'Profile'
         }
       },
       {
