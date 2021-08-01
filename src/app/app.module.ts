@@ -6,6 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
 import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
+import { HttpClientModule } from '@angular/common/http';
 
 import { IconModule, IconSetModule, IconSetService } from '@coreui/icons-angular';
 
@@ -23,7 +24,6 @@ import { P404Component } from './views/error/404.component';
 import { P500Component } from './views/error/500.component';
 import { LoginComponent } from './views/login/login.component';
 import { RegisterComponent } from './views/register/register.component';
-import { ProfileComponent } from './team1/profile/profile.component';
 
 const APP_CONTAINERS = [
   DefaultLayoutComponent
@@ -76,6 +76,7 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
     ChartsModule,
     IconModule,
     IconSetModule.forRoot(),
+    HttpClientModule
   ],
   declarations: [
     AppComponent,
@@ -83,8 +84,7 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
     P404Component,
     P500Component,
     LoginComponent,
-    RegisterComponent,
-    ProfileComponent
+    RegisterComponent
 
   ],
   providers: [
